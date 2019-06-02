@@ -9,11 +9,11 @@ export class UserServiceService {
   constructor(private http: HttpClient) { }
 
   getUsers() {
-    return this.http.get('http://localhost:64091/api/users');
+    return this.http.get('http://10.48.1.5:8001/api/users');
   }
 
   addUser(user: any) {
-    return this.http.post('http://localhost:64091/api/users', user, {
+    return this.http.post('http://10.48.1.5:8001/api/users', user, {
       headers: new HttpHeaders({
           'Content-Type': 'application/json'
       })
